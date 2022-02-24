@@ -1,6 +1,7 @@
 /* Start Variable */
 :root {
   --main-color: #2296f3;
+  --main-color-alt: #1787e0;
   --second-color: #ececec;
   --link-hover-color: #fafafa;
   --main-padding: 15px;
@@ -82,6 +83,11 @@ body {
   font-size: 26px;
   font-weight: 700;
 }
+@media (max-width: 767px) {
+  .header .logo {
+    height: 50px;
+  }
+}
 .header .main-links {
   display: flex;
   justify-content: center;
@@ -101,7 +107,7 @@ body {
 @media (max-width: 767px) {
   .header .main-links > li > a {
     font-size: 14px;
-    height: 50px;
+    height: 40px;
   }
 }
 .header .main-links > li > a::before {
@@ -239,25 +245,102 @@ body {
 }
 .landing .container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: calc(100% - 72px);
+  min-height: calc(100% - 72px);
+  padding-bottom: 120px;
 }
 .landing .text {
-  flex-basis: 40%;
-}
-.landing .animation-image {
   flex: 1;
 }
+@media (max-width: 991px) {
+  .landing .text {
+    text-align: center;
+  }
+}
 .landing .animation-image img {
-  max-width: 100%;
+  position: relative;
+  width: 600px;
+  animation: up-and-down 5s linear infinite;
+}
+@keyframes image-animation {
+  from {
+    margin-bottom: 30px;
+  }
+  to {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .landing .animation-image {
+    display: none;
+  }
 }
 .landing .text h1 {
+  margin: 0;
+  letter-spacing: -1px;
+  font-size: 40px;
+}
+@media (max-width: 767px) {
+  .landing .text h1 {
+    font-size: 30px;
+  }
 }
 .landing .text p {
+  margin-top: 15px;
   color: #666666;
   font-size: 23px;
   line-height: var(--main-line-height);
+  max-width: 500px;
+}
+@media (max-width: 991px) {
+  .landing .text p {
+    margin: 15px auto;
+  }
+}
+@media (max-width: 767px) {
+  .landing .text p {
+    font-size: 17px;
+  }
+}
+.landing .arow-to-down {
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  color: var(--main-color);
+  transform: translateX(-50%);
+  transition: var(--main-transtion);
+}
+
+.landing .arow-to-down i {
+  animation: bouncing 1.3s linear infinite;
+}
+.landing .arow-to-down:hover {
+  color: var(--main-color-alt);
 }
 
 /* End landing */
+/* start animation */
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
+@keyframes bouncing {
+  0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40%,
+  60% {
+    transform: translateY(15px);
+  }
+}
+/* end animation */
