@@ -5,6 +5,7 @@
   --link-hover-color: #fafafa;
   --main-padding: 15px;
   --main-transtion: 0.3s;
+  --main-line-height: 1.6;
 }
 /* End Variable */
 /* Start Componant */
@@ -123,13 +124,14 @@ body {
 }
 .header .main-links > li:hover .extended-list {
   opacity: 100%;
-  top: 100%;
+  top: calc(100% + 1px);
   z-index: +1000;
   transition: var(--main-transtion);
 }
 
 /* extended-list style start in header*/
 .header .main-links .extended-list {
+  background-color: white;
   position: absolute;
   left: 0;
   top: calc(100% + 50px);
@@ -218,5 +220,44 @@ body {
   margin-right: 5px;
 }
 /* extended-list style in header start*/
-
 /* End header */
+/* Start landing */
+.landing {
+  position: relative;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--second-color);
+  z-index: -1;
+  transform: skewY(-5deg);
+  top: -30px;
+  left: 0;
+  transform-origin: top left;
+}
+.landing .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 72px);
+}
+.landing .text {
+  flex-basis: 40%;
+}
+.landing .animation-image {
+  flex: 1;
+}
+.landing .animation-image img {
+  max-width: 100%;
+}
+.landing .text h1 {
+}
+.landing .text p {
+  color: #666666;
+  font-size: 23px;
+  line-height: var(--main-line-height);
+}
+
+/* End landing */
