@@ -798,6 +798,95 @@ body {
   padding: 10px 0;
 }
 /* End team-members */
+/* Start services */
+.services {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-top);
+  background-color: var(--second-color);
+}
+.services .container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.services .box {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  transition: var(--main-transtion);
+  counter-increment: number-of-boxs;
+}
+.services .box::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color);
+  transition: var(--main-transtion);
+}
+.services .box:hover::before {
+  width: 100%;
+}
+.services .box:hover {
+  transform: translateY(-10px);
+}
+.services .box .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services .box .card-footer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--main-padding);
+  background-color: #f9f9f9;
+}
+.services .box .card-footer::before {
+  content: "0" counter(number-of-boxs);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  height: 100%;
+  width: 80px;
+  padding-right: 15px;
+  left: 0;
+  top: 0;
+  background-color: var(--main-color);
+}
+.services .box .card-footer::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  background-color: #d5d5d5;
+  left: 80px;
+  top: 0;
+  transform: skewX(-30deg);
+}
+.services .box .icon h2 {
+  margin: 20px 0px 40px;
+  color: var(--main-color);
+  font-size: 25px;
+}
+.services .box .icon i {
+  margin-top: 30px;
+  color: #d5d5d5;
+}
+.services .box .card-footer a {
+  color: var(--main-color);
+}
+
+/* End services */
 /* start animation */
 @keyframes up-and-down {
   0%,
