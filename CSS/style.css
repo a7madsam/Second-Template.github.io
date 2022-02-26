@@ -713,12 +713,8 @@ body {
   line-height: var(--main-line-height);
   color: var(--main-paragraph-color);
 }
-.testimonials .box .stars {
-}
 .testimonials .box .stars .fa-solid {
   color: var(--star-color);
-}
-.testimonials .box .stars .fa-regular {
 }
 /* End TESTIMONIALS */
 /* Start team-members */
