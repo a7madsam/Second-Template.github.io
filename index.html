@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,6 +21,9 @@
 </head>
 
 <body>
+    <span class="scroll-to-top" style="display: none;">
+        <i class="fa-solid fa-angle-up"></i>
+    </span>
     <!-- Start header -->
     <div class="header">
         <div class="container">
@@ -614,13 +618,13 @@
             </div>
             <div class="bars">
                 <p>HTML</p>
-                <div class="bar"><span style="width:80%"></span></div>
+                <div class="bar"><span style="width:0%" data-custom="80%"></span></div>
                 <p>CSS</p>
-                <div class="bar"><span style="width:75%"></span></div>
+                <div class="bar"><span style="width:0%" data-custom="75%"></span></div>
                 <p>JavaScript</p>
-                <div class="bar"><span style="width:70%"></span></div>
+                <div class="bar"><span style="width:0%" data-custom="70%"></span></div>
                 <p>Python</p>
-                <div class="bar"><span style="width:80%"></span></div>
+                <div class="bar"><span style="width:0%" data-custom="80%"></span></div>
             </div>
         </div>
     </div>
@@ -684,19 +688,19 @@
             </div>
             <div class="box">
                 <div class="counter">
-                    <div>
+                    <div class="days">
                         <h1>200</h1>
                         <p>Days</p>
                     </div>
-                    <div>
+                    <div class="hours">
                         <h1>30</h1>
                         <p>Hours</p>
                     </div>
-                    <div>
+                    <div class="minutes">
                         <h1>24</h1>
                         <p>Minutes</p>
                     </div>
-                    <div>
+                    <div class="seconds">
                         <h1>50</h1>
                         <p>Seconds</p>
                     </div>
@@ -880,22 +884,22 @@
         <div class="container">
             <div class="box">
                 <i class="fa-regular fa-user"></i>
-                <p>180</p>
+                <p data-goal="180">0</p>
                 <p>Clients</p>
             </div>
             <div class="box">
                 <i class="fa-solid fa-code"></i>
-                <p>140</p>
+                <p data-goal="140">0</p>
                 <p>Projects</p>
             </div>
             <div class="box">
                 <i class="fa-solid fa-globe"></i>
-                <p>70</p>
+                <p data-goal="70">0</p>
                 <p>Countries</p>
             </div>
             <div class="box">
                 <i class="fa-solid fa-money-bill"></i>
-                <p>500K</p>
+                <p data-goal="500" data-unit="K">0</p>
                 <p>Money</p>
             </div>
         </div>
@@ -968,6 +972,7 @@
     <div class="copy-right">
         Made With <i class="fa-solid fa-heart"></i> By Ahmad Sameer
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>

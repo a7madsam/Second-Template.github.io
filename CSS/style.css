@@ -126,6 +126,7 @@ ul {
 }
 body {
   font-family: "Cairo", sans-serif;
+  position: relative;
 }
 /* End Global Rules */
 .container {
@@ -340,7 +341,7 @@ body {
 .landing .container {
   display: flex;
   align-items: center;
-  min-height: calc(100% - 72px);
+  min-height: calc(100vh - 72px);
   padding-bottom: 120px;
 }
 .landing .text {
@@ -1142,6 +1143,7 @@ body {
   border: 1px solid #d4d4d4;
   border-radius: 10px;
   transition: var(--main-transtion);
+  width: 75px;
 }
 .events .box .counter div:hover {
   border-color: var(--main-color);
@@ -1894,6 +1896,31 @@ body {
 .copy-right i {
   margin: 0px 4px;
   color: var(--main-color);
+}
+.scroll-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  z-index: 2;
+  border: 1px solid black;
+  border-radius: 50%;
+  transition: var(--main-transtion);
+  cursor: pointer;
+}
+.scroll-to-top:hover {
+  background-color: #e6e6e68a;
+  transform: translateY(-5px);
+}
+.scroll-to-top i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  z-index: 3;
 }
 /* start animation */
 @keyframes up-and-down {
