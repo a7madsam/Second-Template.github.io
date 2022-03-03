@@ -98,6 +98,25 @@ ul {
   transition: color var(--main-transtion) 0.3s,
     border var(--main-transtion) 0.3s;
 }
+.spikes {
+  position: relative;
+}
+.spikes::before {
+  content: "";
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  z-index: 1;
+  background-image: -webkit-linear-gradient(140deg, white 25%, transparent 25%),
+    -webkit-linear-gradient(216deg, white 25%, transparent 25%);
+  background-image: -moz-linear-gradient(140deg, white 25%, transparent 25%),
+    -moz-linear-gradient(216deg, white 25%, transparent 25%);
+  background-image: -o-linear-gradient(140deg, white 25%, transparent 25%),
+    -o-linear-gradient(216deg, white 25%, transparent 25%);
+  background-image: linear-gradient(140deg, white 25%, transparent 25%),
+    linear-gradient(216deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+}
 /* End Componant */
 /* Start Global Rules */
 * {
